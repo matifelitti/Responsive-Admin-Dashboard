@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>MyAdmin</h2>
+            <span class="close-btn" id="close-btn">×</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active">Dashboard</li>
+            <li>Users</li>
+            <li>Orders</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <span class="menu-btn" id="menu-btn">☰</span>
+            <h1>Dashboard</h1>
+            <div class="profile">
+                <img src="https://i.pravatar.cc/40" alt="User" />
+                <span>Admin</span>
+            </div>
+        </nav>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>1,245</p>
+            </div>
+            <div class="card">
+                <h3>Orders</h3>
+                <p>856</p>
+            </div>
+            <div class="card">
+                <h3>Revenue</h3>
+                <p>$12,300</p>
+            </div>
+            <div class="card">
+                <h3>Growth</h3>
+                <p>8.2%</p>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Sales Overview</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+
+        <section class="table-section">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>Customer</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>John Doe</td>
+                        <td>$150</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Jane Smith</td>
+                        <td>$220</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Mike Ross</td>
+                        <td>$330</td>
+                        <td>Cancelled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
