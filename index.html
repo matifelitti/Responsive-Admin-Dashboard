@@ -27,29 +27,36 @@
     <div class="main-content">
         <nav class="navbar">
             <span class="menu-btn" id="menu-btn">☰</span>
-            <h1>Dashboard</h1>
-            <div class="profile">
-                <img src="https://i.pravatar.cc/40" alt="User" />
-                <span>Admin</span>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+            </div>
+
+            <div class="nav-actions">
+                <button id="dark-toggle">🌙</button>
+                <div class="profile">
+                    <img src="https://i.pravatar.cc/40" alt="User" />
+                    <span>Admin</span>
+                </div>
             </div>
         </nav>
 
         <section class="cards">
             <div class="card">
                 <h3>Total Users</h3>
-                <p>1,245</p>
+                <p class="counter" data-target="1245">0</p>
             </div>
             <div class="card">
                 <h3>Orders</h3>
-                <p>856</p>
+                <p class="counter" data-target="856">0</p>
             </div>
             <div class="card">
                 <h3>Revenue</h3>
-                <p>$12,300</p>
+                <p class="counter" data-target="12300">$0</p>
             </div>
             <div class="card">
                 <h3>Growth</h3>
-                <p>8.2%</p>
+                <p class="counter" data-target="82">0%</p>
             </div>
         </section>
 

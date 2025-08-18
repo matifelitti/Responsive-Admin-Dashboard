@@ -8,6 +8,8 @@
 body {
   display: flex;
   background: #f5f6fa;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
 .sidebar {
@@ -22,6 +24,14 @@ body {
   transition: transform 0.3s ease;
 }
 
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.main-content.collapsed {
+  margin-left: 0;
+}
+
 .sidebar-header {
   display: flex;
   justify-content: space-between;
@@ -30,6 +40,8 @@ body {
 
 .close-btn {
   cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .sidebar-menu {
@@ -51,6 +63,7 @@ body {
   margin-left: 240px;
   padding: 1rem;
   flex: 1;
+  transition: margin-left 0.3s;
 }
 
 .navbar {
@@ -67,6 +80,25 @@ body {
   display: none;
   cursor: pointer;
   font-size: 1.5rem;
+}
+
+.search-bar input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .profile {
@@ -91,6 +123,7 @@ body {
   text-align: center;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s, color 0.3s;
 }
 
 .card h3 {
@@ -148,4 +181,24 @@ td {
   .menu-btn {
     display: block;
   }
+  .search-bar {
+    display: none;
+  }
+}
+
+body.dark {
+  background: #1e272e;
+  color: #f5f6fa;
+}
+
+body.dark .navbar,
+body.dark .card,
+body.dark .chart-section,
+body.dark .table-section {
+  background: #2f3640;
+  color: #f5f6fa;
+}
+
+body.dark thead {
+  background: #353b48;
 }
