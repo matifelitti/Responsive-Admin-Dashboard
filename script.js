@@ -5,14 +5,18 @@ const mainContent = document.querySelector(".main-content");
 
 menuBtn.addEventListener("click", () => {
   sidebar.classList.remove("collapsed");
-  mainContent.classList.remove("collapsed");
   sidebar.classList.add("show");
+  mainContent.classList.remove("expanded");
+
+  menuBtn.style.display = "none";
 });
 
 closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("show");
   sidebar.classList.add("collapsed");
-  mainContent.classList.add("collapsed");
+  mainContent.classList.add("expanded");
+
+  menuBtn.style.display = "block";
 });
 
 const darkToggle = document.getElementById("dark-toggle");
