@@ -34,11 +34,10 @@ This project includes a sidebar navigation, dark mode toggle, search bar, animat
 ## 🚀 Getting Started
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/matifelitti/Responsive-Admin-Dashboard.git
    ```
-
-````
 
 2. Open the project folder:
 
@@ -47,5 +46,7 @@ This project includes a sidebar navigation, dark mode toggle, search bar, animat
    ```
 
 3. Run the project:
+
+   ```bash
    Simply open `index.html` in your favorite browser.
-````
+   ```
